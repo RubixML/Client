@@ -1,0 +1,89 @@
+{
+    "name": "rubix/server",
+    "type": "library",
+    "description": "The client SDK for Rubix ML Server.",
+    "homepage": "https://github.com/RubixML/Client",
+    "license": "MIT",
+    "readme": "README.md",
+    "keywords": [
+        "ai", "api", "cloud", "distributed", "graphql", "graph ql", "inference", "inference engine",
+        "inference server", "infrastructure", "json api", "machine learning", "microservice", "ml",
+        "ml infrastructure", "ml server", "model server", "model deployment", "php", "php ai",
+        "php machine learning", "php ml", "prediction", "rest api", "rest server", "rest client",
+        "rubix", "rubix ml", "rubixml", "server"
+    ],
+    "authors": [
+        { 
+            "name": "Andrew DalPino",
+            "role": "Project Lead",
+            "homepage": "https://github.com/andrewdalpino",
+            "email": "support@andrewdalpino.com"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/RubixML/Server/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/psr7": "^1.7",
+        "psr/http-message": "^1.0",
+        "rubix/ml": "^1.0",
+        "symfony/polyfill-php80": "^1.17"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "2.18.*",
+        "phpstan/phpstan": "0.12.*",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan-phpunit": "0.12.*",
+        "phpunit/phpunit": "8.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rubix\\Client\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rubix\\Client\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "build": [
+            "@composer install",
+            "@analyze",
+            "@test",
+            "@check"
+        ],
+        "analyze": "phpstan analyse -c phpstan.neon",
+        "check": [
+            "@putenv PHP_CS_FIXER_IGNORE_ENV=1",
+            "php-cs-fixer fix --config=.php_cs.dist -v --dry-run --using-cache=no"
+        ],
+        "fix": "php-cs-fixer fix --config=.php_cs.dist",
+        "test": "phpunit"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/RubixML"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/andrewdalpino"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/RubixML/Server/issues",
+        "source": "https://github.com/RubixML/Server",
+        "chat": "https://t.me/RubixML",
+        "email": "support@andrewdalpino.com"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
