@@ -44,7 +44,7 @@ class CompressRequestBody implements Middleware
      * @param int $threshold
      * @throws \Rubix\Client\Exceptions\InvalidArgumentException
      */
-    public function __construct(int $level = 1, int $threshold = self::MAX_MTU)
+    public function __construct(int $level = 5, int $threshold = self::MAX_MTU)
     {
         if ($level < 0 or $level > 9) {
             throw new InvalidArgumentException('Level must be'

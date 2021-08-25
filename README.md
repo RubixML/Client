@@ -151,7 +151,7 @@ Apply the Gzip compression algorithm to the request body.
 #### Parameters
 | # | Param | Default | Type | Description |
 |---|---|---|---|---|
-| 1 | level | 1 | int | The compression level between 0 and 9 with 0 meaning no compression. |
+| 1 | level | 5 | int | The compression level between 0 and 9 with 0 meaning no compression. |
 | 2 | threshold | 65535 | int | The minimum size of the request body in bytes in order to be compressed. |
 
 **Example**
