@@ -1,7 +1,7 @@
 {
-    "name": "rubix/server",
+    "name": "rubix/client",
     "type": "library",
-    "description": "The client SDK for Rubix ML Server.",
+    "description": "The PHP client SDK for Rubix ML Server.",
     "homepage": "https://github.com/RubixML/Client",
     "license": "MIT",
     "readme": "README.md",
@@ -21,7 +21,7 @@
         },
         {
             "name": "Contributors",
-            "homepage": "https://github.com/RubixML/Server/graphs/contributors"
+            "homepage": "https://github.com/RubixML/Client/graphs/contributors"
         }
     ],
     "require": {
@@ -29,7 +29,7 @@
         "guzzlehttp/guzzle": "^7.2",
         "guzzlehttp/psr7": "^1.7",
         "psr/http-message": "^1.0",
-        "rubix/ml": "^1.0",
+        "rubix/ml": "^2.0",
         "symfony/polyfill-php80": "^1.17"
     },
     "require-dev": {

@@ -1,5 +1,5 @@
 # Rubix Client
-The client SDK for Rubix ML Server.
+The PHP client SDK for Rubix ML Server.
 
 ## Installation
 Install Rubix Client SDK using [Composer](https://getcomposer.org/):
