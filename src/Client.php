@@ -18,7 +18,7 @@ interface Client
      * Return the joint probabilities of each sample in a dataset.
      *
      * @param \Rubix\ML\Datasets\Dataset $dataset
-     * @return array[]
+     * @return array<array<float>>
      */
     public function proba(Dataset $dataset) : array;
 
